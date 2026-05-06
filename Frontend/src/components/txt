@@ -1,0 +1,202 @@
+Me chamo Lucas Manassés Silva de Araújo. Estou com 20 anos e sou estudante de Análise e Desenvolvimento de Sistemas na UNIAMÉRICA/DESCOMPLICA, onde atualmente estou no 5º período. Eu sou uma pessoa muito dedicada à tecnologia e, ao longo do tempo, explorei várias áreas de programação e desenvolvimento. No entanto, minha verdadeira paixão é o Desenvolvimento Back-end em Node.js.
+
+Como desenvolvedor back-end, tenho experiência prática com várias linguagens, bancos de dados e ferramentas, como JavaScript, Node.js, TypeScript, Python, SQL e MySQL. Atuo no desenvolvimento de sistemas, APIs, automações e aplicações internas. Uma das minhas principais habilidades é resolver problemas reais por meio da tecnologia. Busco sempre entregar soluções eficientes, organizadas e escaláveis.
+
+Eu tive a oportunidade de trabalhar na Rede Brasil de Comunicação, onde desenvolvi sistemas e aplicações internas para vários setores da empresa, incluindo rádio e TV. Construí sistemas web, organizei fluxos internos e automatizei processos, melhorando o dia a dia da equipe. Também desenvolvi soluções para o setor de TI, como interfaces de administração, integrações e ferramentas internas.
+
+Outra experiência marcante foi a criação de um sistema completo para o almoxarifado da Bereia Music, uma instituição sem fins lucrativos. O sistema abrangia controle de estoque, cadastros e gestão de materiais. Além disso, criei um chatbot inteligente para atendimento ao cliente de uma livraria, utilizando WhatsApp Web JS, Node.js e MySQL. O chatbot tinha funcionalidades de registro de conversas, respostas automatizadas e acompanhamento de usuários em tempo real.
+
+Participei de um grande projeto educacional na Softex Pernambuco, onde auxiliamos no desenvolvimento da IAra, uma inteligência artificial voltada para atender comunidades ribeirinhas, quilombolas e regiões de difícil acesso. O projeto teve um foco social e educacional, com impacto direto na democratização do conhecimento.
+
+Eu sou apaixonado por tecnologia e construção de soluções reais. Transformo ideias em projetos funcionais que geram resultado. Gosto de enfrentar desafios e ver aplicações rodando de verdade. Meu objetivo é evoluir continuamente como desenvolvedor e criar soluções bem estruturadas, úteis e escaláveis. Vale a pena conferir meus projetos e ver na prática o que eu venho construindo.
+
+
+
+Desenvolvimento Técnico
+Experiência sólida em tecnologias web modernas e desenvolvimento Back-end.
+
+Solução de Problemas
+Capacidade analítica para identificar e resolver desafios complexos.
+
+Foco em Resultados
+Comprometimento com a entrega de soluções eficientes e de qualidade.
+
+Trabalho em Equipe
+Experiência colaborativa em ambientes profissionais dinâmicos.
+
+Lógica e IA
+Desenvolvimento de soluções inteligentes e automações com foco em IA.
+
+Automação de Sistemas
+Criação de processos automatizados para otimizar fluxos e tarefas.
+
+Resolução Complexa
+Capacidade de decompor problemas grandes em soluções eficientes.
+
+Banco de Dados
+Modelagem, consultas e integração com MySQL e outras bases.
+
+habilidades:
+
+Front-end
+JavaScript
+90%
+HTML5
+75%
+CSS3
+60%
+Bootstrap
+70%
+React
+67%
+Vue.js
+40%
+Back-end
+JavaScript
+90%
+TypeScript
+50%
+Python
+50%
+PHP
+20%
+Node.js
+65%
+Express
+60%
+Banco de Dados
+SQL
+60%
+MongoDB
+40%
+PostegreSQL
+45%
+XAMPP
+70%
+MySQL
+65%
+Ferramentas
+Git
+75%
+GitHub
+80%
+VS Code
+85%
+npm
+63%
+
+
+Trajetória Profissional
+Análise e Desenvolvimento de Sistemas
+UNIAMÉRICA/DESCOMPLICA
+2024 - 2026 (5º Período)
+Brasil
+Formação em desenvolvimento de software com foco em análise de sistemas, programação e gestão de projetos tecnológicos.
+
+
+
+Desenvolvedor
+Rede Brasil de Comunicação
+Setembro 2024 a setembro 2025
+Brasil
+Desenvolvimento e manutenção de sistemas para empresa de rádio/TV, trabalhando com tecnologias web modernas e soluções de comunicação digital.
+
+
+Projeto Integrador – MVP de IA
+Aponti
+Agosto 2025 a Julho 2026
+Recife, PE (Presencial)
+Desenvolvi com uma equipe um MVP de inteligência artificial para comunidades ribeirinhas não favorecidas, com foco em soluções de baixo custo e alto impacto social. O projeto envolveu desde a ideação até a implementação de um protótipo funcional, utilizando técnicas de machine learning para auxiliar na gestão de recursos locais e melhoria da qualidade de vida.
+
+redes sociais
+GitHub : https://github.com/lucasmana
+Instagram : https://www.instagram.com/_lucas_manasses/
+LinkedIn : https://www.linkedin.com/in/lucasmanasses
+
+
+projetos :
+
+      title: "Portal corporativo",
+      category: "Web Application",
+      image: "https://i.postimg.cc/6QXM6zrH/IMG-1554-JPG.jpg",
+      alt: "Imagem",
+      style: { marginLeft: "-90px" },
+      description: "Sistema completo para gestão de conteúdo de rádio e TV, desenvolvido para a Rede Brasil de Comunicação. Inclui agendamento de programas, gestão de mídia e relatórios.",
+      technologies: ["PHP", "MySQL", "JavaScript", "Bootstrap"],
+      features: [
+        "Interface administrativa intuitiva",
+        "Gestão de programação",
+        "Upload e organização de mídia"
+
+      ]
+
+      {
+      title: "Cardápio",
+      category: "E-commerce",
+      image: "https://i.postimg.cc/6QXM6zrH/IMG-1554-JPG.jpg",
+      description: "Sistema de Cardápio dividido em categorias : Todos, Entradas, Pratos principais, Sobremesas, e Bebidas.",
+      technologies: ["JavaScript", "HTML", "CSS"],
+      features: [
+        "Visualizações interativas",
+        "Categorias de pedidos",
+        "Facilidade de escolha"
+      ]
+    }
+
+     {
+      title: "Chatbot de abertura de chamado e ocorrências",
+      category: "Chatbot",
+      image: "https://i.postimg.cc/6QXM6zrH/IMG-1554-JPG.jpg",
+      description: "Chatbot de abertura de chamados e ocorrências via WhatsApp integrado com frontend para acompanhamento do chamado e solução de problemas reais.",
+      technologies: ["PHP", "XAMPP", "HTML", "JavaScript", "Socket IO"],
+      features: [
+        "Agilidade no atendimento",
+        "Padronização das respostas",
+        "Melhoria na experiência do usuário",
+        "Redução da carga de trabalho da equipe"
+      ],
+      github: "#",
+      live: "#"
+    },
+
+     {
+      title: "MVP de inteligência artificial",
+      category: "Frontend e Backend Development",
+      image: "https://i.postimg.cc/6QXM6zrH/IMG-1554-JPG.jpg",
+      description: "Inteligência artificial com pensamentos educacionais criada para auxiliar na aprendizagem de comunidades desfavorecidas.",
+      technologies: ["React", "Vite", "CSS", "Bootstrap", "n8n", "PWA", "Node.js", "JWT", "Bcrypt", "Express","Docker","Firestore"],
+      features: [
+        "Design responsivo",
+        "Apoio personalizado ao aprendizado",
+        "Redução das desigualdades educacionais",
+        "Aprendizagem contínua e autônoma"
+      ],
+      github: "#",
+      live: "#"
+    },
+
+    // ✅ NOVO PROJETO CORRIGIDO
+    {
+      title: "Sistema de Gestão",
+      category: "Full Stack Application",
+      image: "https://i.postimg.cc/6QXM6zrH/IMG-1554-JPG.jpg",
+      description: "Sistema Operacional  desenvolvido com foco em Gestão de dados de empresas parceiras, utilizando arquitetura moderna Full Stack. A aplicação permite controle eficiente, organização e escalabilidade, com integração entre frontend e backend.",
+      technologies: [
+        "React",
+        "Vite",
+        "CSS",
+        "Bootstrap",
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "Nodemon"
+      ],
+      features: [
+        "Arquitetura Full Stack moderna",
+        "Integração completa entre frontend e backend",
+        "Gerenciamento eficiente de dados",
+        "Alta escalabilidade e organização do sistema"
+      ],
+      github: "#",
+      live: "#"
+    }
