@@ -3,14 +3,15 @@ import { AnimatePresence, motion } from 'framer-motion';
 import { Code2, Globe, Server, Database, Wrench } from 'lucide-react';
 import { SKILL_GROUPS, SKILLS_SECTION, SKILLS_LEFT_IMAGE } from '../data/portfolioData';
 import { techIconUrl } from '../utils/techIcons';
-import { useStickyParallax } from '../hooks/useStickyParallax'; // Importando com novo nome
+import { useStickyParallax } from '../hooks/useStickyParallax';
 
 const GROUP_ICONS = [Globe, Server, Database, Wrench];
 
+// Moldura ajustada para ser responsiva na altura (max-h-vh)
 function SkillPhotoFrame({ children, className = '' }) {
   return (
     <div className={`rounded-2xl sm:rounded-[1.35rem] p-px bg-gradient-to-br from-primary via-violet-500 to-primary shadow-[0_0_52px_-14px_rgba(91,103,232,0.55)] ${className}`}>
-      <div className="rounded-[15px] sm:rounded-[1.25rem] overflow-hidden bg-black/10 aspect-[4/5] sm:min-h-[300px] max-h-[min(72vh,620px)]">
+      <div className="rounded-[15px] sm:rounded-[1.25rem] overflow-hidden bg-black/10 aspect-[4/5] h-full max-h-[min(65vh,600px)]">
         {children}
       </div>
     </div>
@@ -44,10 +45,7 @@ export default function Skills() {
   const { 
     activeIndex, 
     setSectionRef, 
-    imageRef, 
-    setContainerRef, // Conectado à section principal
-    isSticky, 
-    isAtBottom 
+    setContainerRef 
   } = useStickyParallax(n);
 
   const activeGroup = SKILL_GROUPS[activeIndex] || SKILL_GROUPS[0];
@@ -61,7 +59,9 @@ export default function Skills() {
     >
       <div className="max-w-7xl mx-auto">
         <header className="mb-14 md:mb-16 max-w-2xl">
-          <span className="text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3 block">{SKILLS_SECTION.eyebrow}</span>
+          <span className="text-primary font-bold tracking-[0.25em] uppercase text-xs mb-3 block">
+            {SKILLS_SECTION.eyebrow}
+          </span>
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-black tracking-tighter text-gradient-strong leading-[0.98] mb-4">
             {SKILLS_SECTION.title}
           </h2>
@@ -70,42 +70,38 @@ export default function Skills() {
           </p>
         </header>
 
-        <div className="grid lg:grid-cols-2 lg:gap-16 xl:gap-20 items-start relative">
+        <div className="grid lg:grid-cols-[1fr_1fr] lg:gap-12 xl:gap-2 items-start relative">
           
           {/* COLUNA ESQUERDA (IMAGEM) */}
-          <div className="hidden lg:block h-full relative">
-            <div 
-              ref={imageRef}
-              style={{
-                position: isAtBottom ? 'absolute' : (isSticky ? 'fixed' : 'relative'),
-                bottom: isAtBottom ? '0px' : 'auto',
-                top: isAtBottom ? 'auto' : (isSticky ? '112px' : '0px'),
-                
-                // Transição suave requisitada
-                transition: 'all 0.7s cubic-bezier(0.22, 1, 0.36, 1)',
-                
-                width: isSticky && !isAtBottom ? 'calc((100vw - (100vw - 1280px)) / 2 - 4rem)' : '100%',
-                maxWidth: '420px',
-                zIndex: 40,
-                willChange: 'transform, top, position'
-              }}
-            >
-              <SkillPhotoFrame className="w-full">
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={coverSrc}
-                    src={coverSrc}
-                    alt={activeGroup.title}
-                    initial={{ opacity: 0, filter: 'blur(10px)' }}
-                    animate={{ opacity: 1, filter: 'blur(0px)' }}
-                    exit={{ opacity: 0, filter: 'blur(10px)' }}
-                    transition={{ duration: 0.5 }}
-                    className="w-full h-full object-cover object-center"
-                  />
-                </AnimatePresence>
-              </SkillPhotoFrame>
-            </div>
-          </div>
+<div className="hidden lg:block h-full relative">
+  <div 
+    className="sticky will-change-transform transition-all duration-700 ease-in-out"
+    style={{
+      alignSelf: 'start',
+      zIndex: 40,
+      top: 'min(112px, 12vh)',
+      // A mágica acontece aqui:
+      width: '80%',
+      maxWidth: '400px', // Diminuímos de 470px para 400px para o quadro ficar menor
+    }}
+  >
+    {/* Adicionamos xl:max-w-[470px] para que em telas GIGANTES ele volte ao tamanho original se quiser */}
+    <SkillPhotoFrame className="w-full xl:max-w-[470px]">
+      <AnimatePresence mode="wait">
+        <motion.img
+          key={coverSrc}
+          src={coverSrc}
+          alt={activeGroup.title}
+          initial={{ opacity: 0, scale: 1.05 }}
+          animate={{ opacity: 1, scale: 1 }}
+          exit={{ opacity: 0, scale: 0.95 }}
+          transition={{ duration: 0.6, ease: "anticipate" }}
+          className="w-full h-full object-cover object-center"
+        />
+      </AnimatePresence>
+    </SkillPhotoFrame>
+  </div>
+</div>
 
           {/* COLUNA DIREITA (CONTEÚDO) */}
           <div className="space-y-32 pb-20">

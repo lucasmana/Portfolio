@@ -3,9 +3,19 @@ import { ArrowRight, Download, ChevronDown } from 'lucide-react';
 import { HERO } from '../data/portfolioData';
 import { scrollToSection } from '../utils/scroll';
 import { useStickyOnScroll } from '../hooks/useStickyOnScroll';
+import { useEffect, useState } from 'react';
 
 export default function Hero() {
   const { isSticky, navHeight } = useStickyOnScroll('projects', 100);
+  const [shouldRotate, setShouldRotate] = useState(false);
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setShouldRotate(true);
+    }, 800);
+    
+    return () => clearTimeout(timer);
+  }, []);
   return (
     <section id="hero" className="relative min-h-screen flex flex-col justify-center items-center px-6 pt-28 pb-20 overflow-hidden text-center">
       <div className="absolute inset-0 bg-neural-gradient opacity-40 pointer-events-none" />
@@ -22,8 +32,10 @@ export default function Hero() {
         >
           <motion.div 
             className="relative w-48 h-48 md:w-56 md:h-56 rounded-full overflow-hidden group"
-            animate={isSticky ? { scale: [1, 1.05, 1] } : {}}
-            transition={isSticky ? { repeat: Infinity, duration: 3 } : {}}
+            style={{ transformStyle: 'preserve-3d' }}
+            initial={{ rotateY: 0 }}
+            animate={shouldRotate ? { rotateY: 360 } : {}}
+            transition={{ duration: 1.2, ease: [0.25, 0.46, 0.45, 0.94] }}
           >
             <img
               src={HERO.avatarUrl}

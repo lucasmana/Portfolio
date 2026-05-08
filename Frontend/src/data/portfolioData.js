@@ -38,10 +38,10 @@ export const SKILLS_SECTION = {
 
 export const ABOUT = {
   eyebrow: 'Sobre mim',
-  titleLine1: 'Código que conecta',
-  titleHighlight: 'ponta a ponta',
+  titleLine1: 'Conheça um pouco da',
+  titleHighlight: ' minha história',
   intro:
-    'Sou Lucas Manassés Silva de Araújo, desenvolvedor full stack dedicado a transformar processos reais em software confiável.',
+    'Um desenvolvedor full stack dedicado a transformar processos reais em software confiável.',
   paragraphs: [
     'Sou Lucas Manassés Silva de Araújo, tenho 20 anos e curso Análise e Desenvolvimento de Sistemas na UNIAMÉRICA/DESCOMPLICA (5º período). Minha paixão é construir produtos completos: do layout ao banco, passando por integrações e automações.',
     'Tenho experiência prática com JavaScript, TypeScript, Node.js, Python, PHP, SQL e MySQL. Atuo em sistemas, APIs, automações e aplicações internas — sempre com foco em resolver problemas de verdade, com código organizado e escalável.',
@@ -71,7 +71,7 @@ export const PROJECTS = [
   {
     title: 'Sistema de Gestão',
     category: 'Full Stack Application',
-    image: 'https://i.postimg.cc/bvqnQMBy/Captura-de-Tela-(37).png',
+    image: 'https://i.postimg.cc/TY4nKf5s/Captura-de-Tela-(47).png',
     description:
       'Sistema operacional com foco em gestão de dados de empresas parceiras, utilizando arquitetura Full Stack moderna.',
     techs: ['React', 'Vite', 'CSS', 'Bootstrap', 'Node.js', 'Express', 'MongoDB', 'Nodemon'],

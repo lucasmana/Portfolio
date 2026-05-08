@@ -41,7 +41,7 @@ export function useParallaxScroll(sectionCount) {
     const container = containerRef.current;
     if (!img || !container) return;
 
-    const LERP = 0.1; // Smoothness factor
+    const LERP = 0.02; // Smoothness factor
     const TOP_OFFSET = 112;
 
     let currentY = 0;
@@ -80,7 +80,7 @@ export function useParallaxScroll(sectionCount) {
       const diff = targetY - currentY;
 
       // Smooth interpolation
-      if (Math.abs(diff) < 0.5) {
+      if (Math.abs(diff) < 0.1) {
         currentY = targetY;
       } else {
         currentY += diff * LERP;
