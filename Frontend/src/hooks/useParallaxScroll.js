@@ -21,7 +21,7 @@ export function useParallaxScroll(sectionCount) {
       const lastRect = sections[sections.length - 1].getBoundingClientRect();
       const imageHeight = imageRef.current.offsetHeight;
       
-      const TOP_OFFSET = 112;
+      const TOP_OFFSET = 350;
 
       // Determinamos os estados com uma pequena zona de transição
       const shouldBeSticky = firstRect.top <= TOP_OFFSET && lastRect.bottom >= (TOP_OFFSET + imageHeight);
@@ -42,7 +42,7 @@ export function useParallaxScroll(sectionCount) {
     if (!img || !container) return;
 
     const LERP = 0.02; // Smoothness factor
-    const TOP_OFFSET = 112;
+    const TOP_OFFSET = 300;
 
     let currentY = 0;
     let targetY = 0;

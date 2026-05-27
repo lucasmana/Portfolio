@@ -1,18 +1,8 @@
-import { AnimatePresence, motion } from 'framer-motion';
 import { Plus } from 'lucide-react';
 import { useRef } from 'react';
 import { PROJECTS } from '../data/portfolioData';
 import { useParallaxScroll } from '../hooks/useParallaxScroll';
-
-function ProjectPhotoFrame({ children, className = '' }) {
-  return (
-    <div className={`rounded-2xl sm:rounded-[1.35rem] p-px bg-gradient-to-br from-primary via-violet-500 to-primary shadow-[0_0_52px_-14px_rgba(91,103,232,0.55)] ${className}`}>
-      <div className="rounded-[15px] sm:rounded-[1.25rem] overflow-hidden bg-black/10 aspect-[16/10] sm:aspect-[16/9] sm:min-h-[280px]">
-        {children}
-      </div>
-    </div>
-  );
-}
+import NotebookProject from './NotebookProject';
 
 export default function Projects() {
   const count = PROJECTS.length;
@@ -48,7 +38,7 @@ export default function Projects() {
 
         <div className="grid lg:grid-cols-2 lg:gap-16 xl:gap-20 items-start relative">
           
-          {/* COLUNA ESQUERDA: QUADRO DE IMAGEM - DESKTOP */}
+          {/* COLUNA ESQUERDA: NOTEBOOK COM IMAGEM - DESKTOP */}
           <div className="hidden lg:block h-full relative">
             <div 
               className="sticky top-28 will-change-transform transition-all duration-700 ease-in-out" 
@@ -59,36 +49,11 @@ export default function Projects() {
                 zIndex: 40,
               }}
             >
-              <ProjectPhotoFrame className="w-full">
-                <AnimatePresence mode="wait">
-                  <motion.img
-                    key={active.image}
-                    src={active.image}
-                    alt={active.title}
-                    initial={{ opacity: 0, scale: 0.98 }}
-                    animate={{ opacity: 1, scale: 1 }}
-                    exit={{ opacity: 0, scale: 1.02 }}
-                    transition={{ duration: 0.4, ease: "easeOut" }}
-                    className="w-full h-full object-cover"
-                  />
-                </AnimatePresence>
-              </ProjectPhotoFrame>
-              
-              <div className="mt-6 text-center">
-                <motion.div
-                  key={active.title}
-                  initial={{ opacity: 0, y: 10 }}
-                  animate={{ opacity: 1, y: 0 }}
-                  transition={{ duration: 0.3 }}
-                >
-                  <p className="text-xs font-black text-primary uppercase tracking-[0.2em] mb-1">
-                    {active.category}
-                  </p>
-                  <p className="text-sm font-bold text-white/60 uppercase tracking-widest">
-                    {active.title}
-                  </p>
-                </motion.div>
-              </div>
+              <NotebookProject 
+                image={active.image}
+                title={active.title}
+                category={active.category}
+              />
             </div>
           </div>
 
@@ -134,17 +99,19 @@ export default function Projects() {
 
         {/* VERSÃO MOBILE: IMAGEM ACIMA DA DESCRIÇÃO */}
         <div className="lg:hidden space-y-12 pb-20">
-          {PROJECTS.map((project, i) => (
+          {PROJECTS.map((project) => (
             <article key={project.title} className="space-y-6">
               {/* IMAGEM DO PROJETO */}
               <div className="w-full">
-                <ProjectPhotoFrame className="w-full">
-                  <img
-                    src={project.image}
-                    alt={project.title}
-                    className="w-full h-full object-cover"
-                  />
-                </ProjectPhotoFrame>
+                <div className="rounded-2xl p-px bg-gradient-to-br from-primary via-violet-500 to-primary shadow-[0_0_52px_-14px_rgba(91,103,232,0.55)]">
+                  <div className="rounded-[15px] overflow-hidden bg-black/10 aspect-[16/10]">
+                    <img
+                      src={project.image}
+                      alt={project.title}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                </div>
               </div>
               
               {/* DESCRIÇÃO DO PROJETO */}

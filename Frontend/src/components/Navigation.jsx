@@ -5,7 +5,7 @@ import ThemeToggle from './ThemeToggle';
 
 export default function Navigation({ navLinks, activeSection, isMenuOpen, setIsMenuOpen }) {
   return (
-    <nav className="fixed top-0 left-0 w-full z-50 px-4 sm:px-6 py-5 flex items-center justify-between gap-4 bg-[color:var(--color-bg)]/80 backdrop-blur-xl">
+    <nav className="fixed top-0 left-0 w-full z-[100] px-4 sm:px-6 py-5 flex items-center justify-between gap-4 bg-[color:var(--color-bg)]/80 backdrop-blur-xl">
       <motion.div
         initial={{ opacity: 0, x: -20 }}
         animate={{ opacity: 1, x: 0 }}

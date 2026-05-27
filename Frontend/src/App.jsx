@@ -24,7 +24,13 @@ const App = () => {
   const { toast, showToast } = useToast();
 
   return (
-    <div className={`relative min-h-screen font-sans selection-app ${theme}`} style={{ backgroundColor: 'var(--dark)', color: 'var(--light)' }}>
+    <div className={`relative min-h-screen font-sans selection-app ${theme}`} style={{ color: 'var(--light)' }}>
+      <div className="animated-purple-bg">
+        <div className="purple-blob purple-blob-1"></div>
+        <div className="purple-blob purple-blob-2"></div>
+        <div className="purple-blob purple-blob-3"></div>
+        <div className="purple-blob purple-blob-4"></div>
+      </div>
       <BrainBackground theme={theme} />
 
       <Navigation
