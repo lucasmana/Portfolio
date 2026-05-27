@@ -12,6 +12,7 @@ import ToastNotification from './components/ToastNotification';
 import MobileMenu from './components/MobileMenu';
 import NavigationDots from './components/NavigationDots';
 import ScrollToTop from './components/ScrollToTop';
+import Astronauta from './components/Astronauta';
 import { useActiveSection } from './hooks/useActiveSection';
 import { useToast } from './hooks/useToast';
 import { useTheme } from './context/ThemeContext';
@@ -32,6 +33,7 @@ const App = () => {
         <div className="purple-blob purple-blob-4"></div>
       </div>
       <BrainBackground theme={theme} />
+      <Astronauta />
 
       <Navigation
         navLinks={NAV_LINKS}
