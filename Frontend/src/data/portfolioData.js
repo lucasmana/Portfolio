@@ -162,18 +162,18 @@ export const SKILL_GROUPS = [
   {
     title: 'Front-end',
     coverImage: 'https://i.postimg.cc/kGqvncwK/imagem-de-Lucas-Rbc.jpg',
-    items: ['JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'React', 'Vue.js', 'Next.js', 'Tailwind CSS','Responsividade'],
+    items: ['JavaScript', 'HTML5', 'CSS3', 'Bootstrap', 'React', 'Vue.js', 'Tailwind CSS','Responsividade'],
   },
   {
     title: 'Back-end',
     coverImage: 'https://i.postimg.cc/kGqvncwK/imagem-de-Lucas-Rbc.jpg',
-    items: ['JavaScript', 'TypeScript', 'Python', 'PHP', 'Node.js', 'Express', 'MongoDB', 'PostgreSQL', 'XAMPP', 'MySQL'],
+    items: ['JavaScript', 'TypeScript', 'Python', 'Node.js', 'Express', 'MongoDB', 'XAMPP', 'MySQL'],
   },
   
   {
     title: 'Ferramentas',
     coverImage: 'https://i.postimg.cc/kGqvncwK/imagem-de-Lucas-Rbc.jpg',  
-    items: ['Git', 'GitHub', 'VS Code', 'npm', 'Docker', 'Pwa','Terminal','Postman','Trello'],
+    items: ['Git', 'GitHub', 'VS Code', 'Docker', 'Terminal','Postman','Trello'],
   },
 ];
 
