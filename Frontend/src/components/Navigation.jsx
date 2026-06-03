@@ -1,7 +1,6 @@
 import { motion } from 'framer-motion';
 import { Menu, X } from 'lucide-react';
 import { scrollToSection } from '../utils/scroll';
-import ThemeToggle from './ThemeToggle';
 
 export default function Navigation({ navLinks, activeSection, isMenuOpen, setIsMenuOpen }) {
   return (
@@ -33,7 +32,6 @@ export default function Navigation({ navLinks, activeSection, isMenuOpen, setIsM
       </div>
 
       <div className="flex items-center justify-end gap-2 shrink-0">
-        <ThemeToggle />
         <button
           type="button"
           className="md:hidden text-fg-muted p-2"

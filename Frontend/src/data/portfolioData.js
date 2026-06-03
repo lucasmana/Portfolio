@@ -20,7 +20,7 @@ export const HERO = {
   avatarUrl: 'https://i.postimg.cc/W3MFh2TP/profile-pic-(1).png',
   avatarAlt: 'Lucas Manassés',
   resumeUrl:
-    'https://drive.google.com/uc?export=download&id=1rgTWAtJWyiKbl419rGg5eahkJ5TvrYRC',
+    'https://drive.google.com/file/d/1sJg_VgEi0AF7QZhgr20TWHOaNso_Jcbq/view?usp=sharing',
 };
 
 /** Imagem fixa à esquerda na seção de habilidades (scroll narrativo). */

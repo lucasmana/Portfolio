@@ -15,11 +15,10 @@ import ScrollToTop from './components/ScrollToTop';
 import Astronauta from './components/Astronauta';
 import { useActiveSection } from './hooks/useActiveSection';
 import { useToast } from './hooks/useToast';
-import { useTheme } from './context/ThemeContext';
 import { NAV_LINKS } from './data/portfolioData';
 
 const App = () => {
-  const { theme } = useTheme();
+  const theme = 'dark';
   const activeSection = useActiveSection();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const { toast, showToast } = useToast();
@@ -32,7 +31,7 @@ const App = () => {
         <div className="purple-blob purple-blob-3"></div>
         <div className="purple-blob purple-blob-4"></div>
       </div>
-      <BrainBackground theme={theme} />
+      <BrainBackground />
       <Astronauta />
 
       <Navigation
